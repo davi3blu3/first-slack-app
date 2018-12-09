@@ -21,7 +21,7 @@ const express = require('express');
 const app = express();
 
 app.get('/trivia', (req, res, next) => {
-  console.log('interactivity get received!');
+  console.log('trivia get received!');
   res.send('api hit');
 });
 
@@ -36,7 +36,7 @@ app.get('/options', (req, res, next) => {
 });
 
 app.post('/trivia', (req, res, next) => {
-  console.log('interactivity post received!');
+  console.log('trivia post received!');
   res.send('api hit');
 });
 
