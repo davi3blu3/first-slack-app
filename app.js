@@ -20,33 +20,13 @@ const { WebClient } = require('@slack/client');
 const express = require('express');
 const app = express();
 
+app.get('/', (req, res, next) => {
+  console.log('web app visited');
+  res.send('api is running!');
+});
+
 app.get('/trivia', (req, res, next) => {
   console.log('trivia get received!');
-  res.send('api hit');
-});
-
-app.get('/interactivity', (req, res, next) => {
-  console.log('interactivity get received!');
-  res.send('api hit');
-});
-
-app.get('/options', (req, res, next) => {
-  console.log('options get received!');
-  res.send('api hit');
-});
-
-app.post('/trivia', (req, res, next) => {
-  console.log('trivia post received!');
-  res.send('api hit');
-});
-
-app.post('/interactivity', (req, res, next) => {
-  console.log('interactivity post received!');
-  res.send('api hit');
-});
-
-app.post('/options', (req, res, next) => {
-  console.log('options post received!');
   res.send('api hit');
 });
 
