@@ -1,6 +1,7 @@
 const request = require('request');
 
-const url = 'https://hooks.slack.com/services/'; // add app extension
+const url =
+  'https://hooks.slack.com/services/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'; // add app extension
 
 let payload = {
   text: '*Select a day for trivia this week:*',

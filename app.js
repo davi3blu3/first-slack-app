@@ -16,3 +16,40 @@ const { WebClient } = require('@slack/client');
 //     console.log('Message sent: ', res.ts);
 //   })
 //   .catch(console.error);
+
+const express = require('express');
+const app = express();
+
+app.get('/trivia', (req, res, next) => {
+  console.log('interactivity get received!');
+  res.send('api hit');
+});
+
+app.get('/interactivity', (req, res, next) => {
+  console.log('interactivity get received!');
+  res.send('api hit');
+});
+
+app.get('/options', (req, res, next) => {
+  console.log('options get received!');
+  res.send('api hit');
+});
+
+app.post('/trivia', (req, res, next) => {
+  console.log('interactivity post received!');
+  res.send('api hit');
+});
+
+app.post('/interactivity', (req, res, next) => {
+  console.log('interactivity post received!');
+  res.send('api hit');
+});
+
+app.post('/options', (req, res, next) => {
+  console.log('options post received!');
+  res.send('api hit');
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
